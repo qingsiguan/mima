@@ -10,15 +10,12 @@ hostname = translator.felo.me
 */
 
 var objc = JSON.parse($response.body);
-
     objc = {
   "status": 200,
   "data": {
     "active_time" : "2023-11-22T05:14:57+0000",
-
     "expire_time": "2099-12-06T00:30:23+0000",
     "now" : "2023-12-05T01:02:07+0000",
-
     "user_product_total": [
       {
         "freeze": 0,
