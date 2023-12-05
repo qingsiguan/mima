@@ -2,7 +2,7 @@
 Felo
 
 [rewrite_local]
-https://translator.felo.me/api/plan/current
+https://translator.felo.me/api/plan/current url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/felo
 
 [mitm]
 hostname = translator.felo.me
