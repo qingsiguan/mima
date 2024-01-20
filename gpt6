@@ -1,0 +1,28 @@
+/*
+gpt
+
+[rewrite_local]
+https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/gpt6
+
+[mitm]
+hostname = nichousha.sjrjyffs.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = 
+{
+  "msg" : "ok",
+  "data" : {
+    "vipLabel" : "永久vip",
+    "imgNum" : 0,
+    "id" : "1748605515534606338",
+    "autoMatch" : "1",
+    "vipStatus" : "1",
+    "faceAuthStatus" : "1",
+    "likeNum" : 1
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
