@@ -1,0 +1,37 @@
+/*
+筑梦
+
+[rewrite_local]
+https://api.islandai.cn/app/peacock/v1/user/vip url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/zhumeng
+
+[mitm]
+hostname = api.islandai.cn
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "language" : "CN",
+    "period" : "perpetual",
+    "sort" : 0,
+    "amount" : 0,
+    "iOSDisplay" : true,
+    "lastModifiedTime" : 1704812088000,
+    "productId" : "painting",
+    "name" : "永久会员",
+    "type" : "vip",
+    "strikeout" : true,
+    "createdTime" : 1680526251000,
+    "id" : "18e7afacd21e11ed8d1252540028ea92",
+    "iOSCredit" : 19680,
+    "status" : "PAID",
+    "channel" : "Apple",
+    "type" : "vip"
+    "vipExpireTime" : "2122-08-16 08:20:30",
+  },
+  "code" : "success"
+}
+
+$done({body : JSON.stringify(objc)});
