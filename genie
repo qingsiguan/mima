@@ -1,0 +1,23 @@
+/*
+genie
+
+[rewrite_local]
+https://api.mitmiu.com:9090/ai/user/rights url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/genie
+
+[mitm]
+hostname = api.mitmiu.com:9090
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "code" : "0",
+  "data" : {
+    "genius4VipTodayAvailableCount" : 0,
+    "genius4TrialAvailableCount" : 999999
+  },
+  "msg" : "成功",
+  "traceId" : "10.204.189.62-a578ce^1705895137839^940047"
+}
+
+$done({body : JSON.stringify(objc)});
