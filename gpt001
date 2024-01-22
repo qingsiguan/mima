@@ -1,0 +1,29 @@
+/*
+gpt
+
+[rewrite_local]
+https://poqvn.sjrjyffs.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/gpt001
+
+[mitm]
+hostname = poqvn.sjrjyffs.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "ok",
+  "data" : {
+    "vipLabel" : "0",
+    "imgNum" : 10000,
+    "vipdays" : "35999",
+    "id" : "1749381113437659138",
+    "autoMatch" : "1",
+    "vipStatus" : "1",
+    "vipExpireTime" : "2122-08-16 08:20:30",
+    "faceAuthStatus" : "0",
+    "likeNum" : 0
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
