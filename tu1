@@ -1,0 +1,60 @@
+/*
+gpt
+
+[rewrite_local]
+https://api.islandai.cn/app/peacock/v1/ernie/images url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/tu1
+
+[mitm]
+hostname = api.islandai.cn
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "total" : 1,
+    "content" : [
+      {
+        "status" : 0,
+        "newest" : false,
+        "reference" : "",
+        "robotId" : "2c9180838d061650018d070e17d90be0",
+        "negative" : "",
+        "resolution" : "",
+        "prompt" : "",
+        "type" : "text",
+        "types" : "",
+        "handpick" : false,
+        "progress" : "提交成功",
+        "platform" : "MJPlus",
+        "createdTime" : 1705976797000,
+        "id" : "2c9180838d317128018d342416de061e",
+        "num" : 4,
+        "modelId" : "2c9180828cca5c71018ccfb045e03bca",
+        "text" : "",
+        "credit" : 30,
+        "vip" : false,
+        "taskId" : 1705976796865024
+      }
+    ],
+    "pageable" : {
+      "page" : 0,
+      "size" : 30,
+      "sort" : {
+        "orders" : [
+          {
+            "property" : "createdTime",
+            "ignoreCase" : false,
+            "nullHandling" : "NATIVE",
+            "direction" : "DESC"
+          }
+        ]
+      }
+    }
+  },
+  "code" : "success"
+}
+
+
+$done({body : JSON.stringify(objc)});
