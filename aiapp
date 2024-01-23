@@ -1,0 +1,40 @@
+/*
+gpt
+
+[rewrite_local]
+https://hai2-api.shengmaapp.com/user/getAppUser url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/aiapp
+
+[mitm]
+hostname = hai2-api.shengmaapp.com
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "code" : 0,
+  "message" : "ok",
+  "data" : {
+    "mobile" : "",
+    "inviteName" : "",
+    "shareQQ" : false,
+    "shareRewardNum" : 2,
+    "sumChatAskNum" : 0,
+    "shareWX" : false,
+    "surplusUseNum" : 3,
+    "beInviteSendNum" : 10,
+    "user" : {
+      "avatar" : "https://file.shengmaapp.com/storage/aichat2/common/default/default_user_avatar.png",
+      "loginType" : 4,
+      "alias" : "",
+      "id" : 2009190,
+      "isVip" : true,
+      "name" : "小小白",
+      "vipExpire" : 2122-08-16 08:20:30
+    }
+  },
+  "traceId" : "20240123229987484755",
+  "timestamps" : 1705987484763
+}
+
+
+$done({body : JSON.stringify(objc)});
