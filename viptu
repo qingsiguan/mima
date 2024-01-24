@@ -1,0 +1,53 @@
+/*
+筑梦
+
+[rewrite_local]
+https://api.islandai.cn/app/peacock/v1/user/vip url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/viptu
+
+[mitm]
+hostname = api.islandai.cn
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "amount" : 38,
+    "status" : "NORMAL",
+    "channel" : "Apple",
+    "lastModifiedTime" : 1706061739000,
+    "id" : "2c9180838d3655b0018d39343372161b",
+    "expireTime" : 4479798798000,
+    "transactionId" : "150001661506285",
+    "type" : "vip",
+    "vip" : {
+      "language" : "CN",
+      "period" : "week",
+      "sort" : 3,
+      "iOSDisplay" : true,
+      "intro" : "2280积分",
+      "lastModifiedTime" : 1704812123000,
+      "productId" : "weekly",
+      "name" : "通话录音大师乐享周度会员",
+      "type" : "vip",
+      "strikeout" : true,
+      "createdTime" : 1682661344000,
+      "id" : "40712ca8e58911eda3df00163e1451f1",
+      "label" : "最受欢迎",
+      "iOSCredit" : 2280,
+      "promotion" : "无限绘画",
+      "androidCredit" : 2280,
+      "unit" : "￥",
+      "countdown" : false,
+      "androidDisplay" : true,
+      "sell" : 38,
+      "price" : 68
+    },
+    "createdTime" : 1706061739000
+  },
+  "code" : "success"
+}
+
+
+$done({body : JSON.stringify(objc)});
