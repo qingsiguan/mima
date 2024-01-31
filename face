@@ -1,0 +1,38 @@
+/*
+dreamface
+
+[rewrite_local]
+https://dreamfaceapp.com/df-server/user/save_user_login url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/face
+
+[mitm]
+hostname = dreamfaceapp.com
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "data" : {
+    "rights" : {
+      "expires_date_format" : "2055-10-12 09:57:14.000",
+      "vip_type" : "TRY_YEAR_PACKAGE",
+      "have_trial" : true,
+      "vip_remainder_day" : 8030,
+      "vip_label" : true,
+      "expires_date" : 2706919034000
+    },
+    "device_name" : "iPhone14,5",
+    "system_version" : "16.7.2",
+    "app_version" : "3.3.0",
+    "app_package_name" : "DreamFace",
+    "user_id" : "1C636208-1AA8-4BC0-B780-02DE7E31B6BC",
+    "device_system" : "iOS",
+    "country_code" : "cn"
+  },
+  "status_code" : "THS12140000000",
+  "extend" : {
+
+  },
+  "status_msg" : "Success"
+}
+
+$done({body : JSON.stringify(objc)});
