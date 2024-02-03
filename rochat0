@@ -1,0 +1,29 @@
+/*
+rochat修改
+
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/rochat0
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/rochat0
+
+[mitm]
+hostname = api.revenuecat.com
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+    "entitlements" : {
+      "premium" : {
+        "grace_period_expires_date" : null,
+        "purchase_date" : "2024-02-03T15:35:13Z",
+        "product_identifier" : "rochat_yearly_subscription",
+        "expires_date" : "2099-03-03T15:35:13Z"
+      }
+    },
+    "original_purchase_date" : "2024-01-28T11:54:14Z",
+    "original_app_user_id" : "78907764474119449",
+    "last_seen" : "2024-02-03T14:19:54Z"
+  }
+}
+
+$done({body : JSON.stringify(objc)});
