@@ -1,0 +1,40 @@
+/****************************************
+
+项目名称：Rochat
+
+*****************************************
+
+[rewrite_local]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/rochat
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/rochat
+
+[mitm]
+hostname = api.revenuecat.com
+
+*************************************/
+
+
+const bbb1023 = {};
+const bbb1024 = JSON.parse(typeof $response != "undefined" && $response.body || null);
+
+const name = "premium";
+const appid = "rochat_yearly_subscription";
+
+if (typeof $response == "undefined") {
+  delete $request.headers["x-revenuecat-etag"];
+  delete $request.headers["X-RevenueCat-ETag"];
+  bbb1023.headers = $request.headers;
+} else if (bbb1024 && bbb1024.subscriber) {
+  bbb1024.subscriber.subscriptions = bbb1024.subscriber.subscriptions || {};
+  bbb1024.subscriber.entitlements = bbb1024.subscriber.entitlements || {};
+  const data = {
+	"product_identifier": (appid),
+	"expires_date": "2099-09-09T09:09:09Z",
+	"purchase_date": "2022-09-09T09:09:09Z"
+	};
+  bbb1024.subscriber.entitlements[(name)] = (data);
+  bbb1024.subscriber.subscriptions[(appid)] = {  ...data,	"Author": "bbb1023",	"Telegram": "bbb1023",	"warning": "仅供学习",	"original_purchase_date": "2022-09-09T09:09:09Z",	"store": "app_store",	"ownership_type": "PURCHASED"};
+  bbb1023.body = JSON.stringify(bbb1024);
+}
+
+$done(bbb1023);
