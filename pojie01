@@ -1,0 +1,54 @@
+/*
+网站破解
+
+[rewrite_local]
+^https:\/\/tutudetu\.top\/user\/api\/index\/commodityDetail\?commodityId=\d+$ url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/pojie01
+
+
+[mitm]
+hostname = tutudetu.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "success",
+  "data" : {
+    "login" : false,
+    "level_disable" : 0,
+    "service_qq" : "",
+    "shared_premium_type" : 0,
+    "widget" : "[]",
+    "coupon" : 0,
+    "user_price" : 0,
+    "delivery_way" : 1,
+    "purchase_count" : 0,
+    "cover" : "/favicon.ico",
+    "shared_sync" : 0,
+    "level_price" : null,
+    "inventory_hidden" : 0,
+    "password_status" : 0,
+    "maximum" : 0,
+    "only_user" : 0,
+    "status" : 1,
+    "price" : 0,
+    "contact_type" : 0,
+    "shared_id" : null,
+    "trade_captcha" : 0,
+    "draft_status" : 0,
+    "owner" : null,
+    "seckill_status" : 0,
+    "draft_premium" : 0,
+    "config" : "",
+    "minimum" : 0,
+    "shared_code" : "",
+    "shared_premium" : 0,
+    "category_id" : 4,
+    "seckill_end_time" : null,
+    "service_url" : "",
+    "seckill_start_time" : null
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
