@@ -1,0 +1,25 @@
+/*
+网站破解
+
+[rewrite_local]
+https://tutudetu.top/user/api/order/state url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/pojie123
+
+
+[mitm]
+hostname = tutudetu.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "success",
+  "data" : {
+    "amount" : 30,
+    "id" : 321,
+    "trade_no" : "812240210173742972",
+    "status" : 1
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
