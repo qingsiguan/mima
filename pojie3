@@ -1,0 +1,61 @@
+/*
+网站破解
+
+[rewrite_local]
+https://tutudetu.top/user/api/index/query url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/pojie3
+
+
+[mitm]
+hostname = tutudetu.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "success",
+  "data" : [
+    {
+      "service_qq" : "",
+      "pay_time" : "2024-02-10 16:27:45",
+      "status" : 1,
+      "amount" : 30,
+      "pay" : {
+        "id" : 3,
+        "cost_type" : 0,
+        "handle" : "Alipay",
+        "recharge" : 0,
+        "code" : "1",
+        "equipment" : 0,
+        "icon" : "/assets/cache/images/202310052029023600242.png",
+        "commodity" : 1,
+        "create_time" : "2023-10-09 19:01:57",
+        "sort" : 1,
+        "name" : "点击此处使用支付宝付款",
+        "cost" : 0
+      },
+      "user_id" : 0,
+      "create_time" : "2024-02-10 16:27:28",
+      "business_avatar" : "/favicon.ico",
+      "leave_message" : null,
+      "race" : null,
+      "card_num" : 1,
+      "contact" : "",
+      "id" : 319,
+      "user" : null,
+      "service_url" : "",
+      "business_username" : "官方自营",
+      "pay_id" : 3,
+      "trade_no" : "166240210164813961",
+      "commodity_id" : 85,
+      "commodity" : {
+        "id" : 85,
+        "password_status" : 0,
+        "name" : "013夏日物语",
+        "cover" : null
+      }
+    }
+  ],
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
