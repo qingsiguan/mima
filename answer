@@ -1,0 +1,42 @@
+/*
+Answer.AI会员
+
+[rewrite_local]
+https://api.gptkeyboard.app/api/v1/user/self url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/answer
+
+[mitm]
+hostname = api.gptkeyboard.app
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "isVip" : true,
+    "under13" : 0,
+    "superAIRewarded" : false,
+    "expireTime" : 2710723782000,
+    "user" : {
+      "userId" : 596712904,
+      "uid" : "9deavO",
+      "avatar" : "",
+      "nickname" : "User9deavO",
+      "gender" : 0,
+      "grade" : 14,
+      "subjects" : [
+        1
+      ],
+      "updatedAt" : 1710463760498,
+      "createdAt" : 1710463728528
+    }
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
+
+
+
+
+
