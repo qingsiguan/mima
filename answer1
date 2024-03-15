@@ -1,0 +1,75 @@
+/*
+Answer.AI额度
+
+[rewrite_local]
+https://api.gptkeyboard.app/api/v1/plan/quota url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/answer1
+
+[mitm]
+hostname = api.gptkeyboard.app
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "ad" : {
+      "count" : 0,
+      "isPhilip" : false
+    },
+    "vip" : {
+      "total" : -1,
+      "used" : 0
+    },
+    "customBotChatFree" : false,
+    "askAi" : {
+      "total" : -1,
+      "used" : 0
+    },
+    "summaryVip" : {
+      "total" : 200,
+      "used" : 0
+    },
+    "gpt4TurboVip" : {
+      "total" : 500,
+      "used" : 0
+    },
+    "summary" : {
+      "total" : 3,
+      "used" : 0
+    },
+    "gpt4" : {
+      "total" : 30,
+      "used" : 0
+    },
+    "flashCardVip" : {
+      "total" : 1000,
+      "used" : 0
+    },
+    "expert" : {
+      "total" : 10,
+      "used" : 0
+    },
+    "flashCard" : {
+      "total" : 10,
+      "used" : 0
+    },
+    "free" : {
+      "total" : {
+        "total" : -1,
+        "used" : 2
+      },
+      "daily" : {
+        "total" : -1,
+        "used" : 2
+      }
+    },
+    "gpt4Turbo" : {
+      "total" : 0,
+      "used" : 0
+    }
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
