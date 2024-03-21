@@ -1,0 +1,23 @@
+/Answer.AI邀请
+
+[rewrite_local]
+https://api.gptkeyboard.app/api/v1/invite/get_rewards url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/answere
+
+[mitm]
+hostname = api.gptkeyboard.app
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "invites" : 100,
+    "reward_per_invite" : 15,
+    "invited" : 100,
+    "rewarded" : 1500
+  },
+  "code" : 200
+}
+
+$done({body : JSON.stringify(objc)});
