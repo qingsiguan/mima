@@ -1,0 +1,133 @@
+/*
+answer ai
+
+[rewrite_local]
+https://api.qonversion.io/v1/user/purchase url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/aianswer
+
+[mitm]
+hostname = api.qonversion.io
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "success" : true,
+  "data" : {
+    "uid" : "QON_1af46d0d5f2b466bb301e06a554a8ec0",
+    "products" : [
+      {
+        "id" : "Monthly",
+        "type" : 0,
+        "store_id" : "com.ninnguyen.AISolve.monthly",
+        "duration" : 1
+      },
+      {
+        "id" : "Weekly",
+        "type" : 1,
+        "store_id" : "com.ninnguyen.AISolve.weekly",
+        "duration" : 0
+      },
+      {
+        "id" : "Lifetime",
+        "type" : 2,
+        "store_id" : "com.ninnguyen.AISolve.lifetime",
+        "duration" : null
+      },
+      {
+        "id" : "Monthly_Without_Trial",
+        "type" : 1,
+        "store_id" : "com.ninnguyen.AISolve.monthly.ios",
+        "duration" : 1
+      },
+      {
+        "id" : "Annualy",
+        "type" : 1,
+        "store_id" : "com.ninnguyen.AISolve.annual.ios",
+        "duration" : 4
+      }
+    ],
+    "offerings" : [
+      {
+        "id" : "main",
+        "tag" : 1,
+        "products" : [
+          {
+            "id" : "Monthly",
+            "type" : 0,
+            "store_id" : "com.ninnguyen.AISolve.monthly",
+            "duration" : 1
+          },
+          {
+            "id" : "Weekly",
+            "type" : 1,
+            "store_id" : "com.ninnguyen.AISolve.weekly",
+            "duration" : 0
+          },
+          {
+            "id" : "Lifetime",
+            "type" : 2,
+            "store_id" : "com.ninnguyen.AISolve.lifetime",
+            "duration" : null
+          },
+          {
+            "id" : "Monthly_Without_Trial",
+            "type" : 1,
+            "store_id" : "com.ninnguyen.AISolve.monthly.ios",
+            "duration" : 1
+          },
+          {
+            "id" : "Annualy",
+            "type" : 1,
+            "store_id" : "com.ninnguyen.AISolve.annual.ios",
+            "duration" : 4
+          }
+        ]
+      }
+    ],
+    "products_permissions" : {
+
+    },
+    "user_products" : [
+      {
+        "id" : "Monthly",
+        "type" : 0,
+        "store_id" : "com.ninnguyen.AISolve.monthly",
+        "duration" : 1
+      }
+    ],
+    "timestamp" : 1711016058,
+    "permissions" : [
+      {
+        "id" : "premium",
+        "trial_start_timestamp" : 1711016052,
+        "active" : 1,
+        "started_timestamp" : 1711016052,
+        "grant_type" : "purchase",
+        "associated_product" : "Monthly",
+        "source" : "appstore",
+        "renews_count" : 0,
+        "store_transactions" : [
+          {
+            "ownership_type" : "owner",
+            "transaction_id" : "150001727587304",
+            "environment" : "production",
+            "transaction_timestamp" : 1711016052,
+            "expiration_timestamp" : 2711275252,
+            "original_transaction_id" : "150001727587304",
+            "type" : "trial_started"
+          }
+        ],
+        "current_period_type" : "trial",
+        "expiration_timestamp" : 2711275252,
+        "renew_state" : 1
+      }
+    ]
+  }
+}
+
+$done({body : JSON.stringify(objc)});
+
+
+
+
+
