@@ -1,0 +1,41 @@
+/*
+Answer.AI破解
+
+[rewrite_local]
+https://api.gptkeyboard.app/api/v1/auth/firebase url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/vipan
+
+[mitm]
+hostname = api.gptkeyboard.app
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "",
+  "data" : {
+    "isFirstLgoin" : false,
+    "isFirstLogin" : false,
+    "token" : {
+      "accessToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTM2Njg0MDIsImlhdCI6MTcxMTA3NjQwMiwidHlwZSI6MCwidWlzIjoiZVg2UCIsInZlciI6Nn0.4QNzVNuqxBcDhA4lHEP1hUoCF8mWfBRk39wyRMDZFXU",
+      "accessExpire" : 2710723782,
+      "refreshAfter" : 1712372402
+    },
+    "user" : {
+      "userId" : 596712904,
+      "uid" : "9deavO",
+      "avatar" : "",
+      "nickname" : "User9deavO",
+      "gender" : 0,
+      "grade" : 14,
+      "subjects" : [
+        1
+      ],
+      "updatedAt" : 1710463760498,
+      "createdAt" : 1710463728528
+    }
+  },
+  "code" : 200
+}
+
+
+$done({body : JSON.stringify(objc)});
