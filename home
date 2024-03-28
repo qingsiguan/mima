@@ -1,0 +1,62 @@
+/*************************************
+
+homework
+
+**************************************
+
+[rewrite_local]
+https://api.apphud.com/v1/subscriptions url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/home
+
+[mitm] 
+hostname = api.apphud.com
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "data" : {
+    "results" : {
+      "locale" : "en_CN",
+      "id" : "78d1a7a0-414b-4370-bfe0-8ba803763c37",
+      "created_at" : "2024-03-28T08:34:46.308Z",
+      "subscriptions" : [
+        {
+          "status" : "trial",
+          "group_id" : "bb7ff212",
+          "autorenew_enabled" : true,
+          "introductory_activated" : true,
+          "cancelled_at" : null,
+          "kind" : "autorenewable",
+          "id" : "91dd1128-8305-4f5c-b531-e34d4c3c4f01",
+          "next_check_at" : "2024-03-28T10:10:42.000Z",
+          "product_id" : "premium_year",
+          "platform" : "ios",
+          "environment" : "production",
+          "local" : false,
+          "retries_count" : 0,
+          "units_count" : 1,
+          "unit" : "year",
+          "in_retry_billing" : false,
+          "started_at" : "2024-03-28T09:10:42.000Z",
+          "original_transaction_id" : "450001745766896",
+          "expires_at" : "2099-03-31T09:10:42.000Z",
+          "is_consumable" : null
+        }
+      ],
+      "user_id" : "F3B5996A-AF9C-4930-AB38-337314FD1306",
+      "currency" : {
+        "code" : "USD",
+        "id" : "08f6985e-67e8-4889-90b6-10beee51f9be",
+        "country_code" : "US",
+        "country_code_alpha3" : "USA"
+      },
+      "devices" : [
+
+      ]
+    },
+    "meta" : null
+  },
+  "errors" : null
+}
+
+$done({body : JSON.stringify(objc)});
