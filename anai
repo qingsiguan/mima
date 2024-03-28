@@ -17,7 +17,7 @@ hostname = api.gptkeyboard.app
 const chxm1023 = {};
 const chxm1024 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 
-const name = "vip";
+const name = "pro";
 const appid = "Answer.AI_pro_yearly_o";
 
 if (typeof $response == "undefined") {
