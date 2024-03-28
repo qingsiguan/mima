@@ -19,7 +19,7 @@ var objc = JSON.parse($request.body);
   "attributes" : {
     "$attConsentStatus" : {
       "updated_at_ms" : 1711609601332,
-      "value" : "success"
+      "value" : "authorized"
     }
   },
   "initiation_source" : "restore"
