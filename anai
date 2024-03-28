@@ -5,11 +5,11 @@
 **************************************
 
 [rewrite_local]
-^https:\/\/api\.gptkeyboard\.app\/api\/v1\/subscription\/.+$ url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/anai
-^https:\/\/api\.gptkeyboard\.app\/api\/v1\/subscription\/.+$ url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/anai
+https://api.revenuecat.com/v1/receipts url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/anai
+https://api.revenuecat.com/v1/receipts url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/anai
 
 [mitm]
-hostname = api.gptkeyboard.app
+hostname = api.revenuecat.com
 
 *************************************/
  
