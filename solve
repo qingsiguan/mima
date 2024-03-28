@@ -7,7 +7,6 @@ solvely
 [rewrite_local]
 #修改
 https://d2s0uxxfvf1zgr.cloudfront.net/solveNowServer/purch/purchaseInfo/v1.0 url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/solve
-https://d2s0uxxfvf1zgr.cloudfront.net/solveNowServer/purch/purchaseInfo/v1.0 url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/solve
 
 
 [mitm] 
