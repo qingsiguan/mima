@@ -1,0 +1,28 @@
+/*************************************
+
+OIOI tokens
+
+**************************************
+
+[rewrite_local]
+https://www.oioiai.cn/api/v1/subscriptions/token_info url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/oioia
+
+[mitm] 
+hostname = www.oioiai.cn
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "success" : true,
+  "errors" : [
+
+  ],
+  "data" : {
+    "remaining_tokens" : 100000000,
+    "total_tokens" : 100000000
+  }
+}
+
+
+$done({body : JSON.stringify(objc)});
