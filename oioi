@@ -1,0 +1,62 @@
+/*************************************
+
+OIOI
+
+**************************************
+
+[rewrite_local]
+https://www.oioiai.cn/api/v1/users/profile url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/oioi
+
+[mitm] 
+hostname = www.oioiai.cn
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "success" : true,
+  "errors" : [
+
+  ],
+  "data" : {
+    "plus" : {
+      "plus_activation_time" : "2024-03-29T02:11:11.223Z",
+      "is_plus" : true,
+      "was_plus" : true,
+      "plus_expiration_time" : "2099-04-05T16:00:00.000Z",
+      "next_token_distribution_time" : "2024-04-29T16:00:00.000Z"
+    },
+    "user" : {
+      "avatar" : "",
+      "phone" : "12345678910",
+      "gender" : "SECRET",
+      "id" : 10289,
+      "email_verified" : false,
+      "phone_verified" : true,
+      "oauths" : [
+
+      ],
+      "email" : "",
+      "password_bind" : false,
+      "name" : "123****8910",
+      "created_time" : "2024-03-29T01:40:59.927Z"
+    },
+    "features" : [
+      {
+        "id" : "price_display",
+        "value" : "b"
+      },
+      {
+        "id" : "comment_reward_banner",
+        "value" : "0"
+      },
+      {
+        "id" : "app_download_banner",
+        "value" : "0"
+      }
+    ]
+  }
+}
+
+
+$done({body : JSON.stringify(objc)});
