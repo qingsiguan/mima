@@ -1,0 +1,25 @@
+/*************************************
+
+小七助手
+
+**************************************
+
+[rewrite_local]
+https://gw.star7.chat/iap/plan/subscribe url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/xiaoqi
+
+[mitm] 
+hostname = gw.star7.chat
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "showUpgradeButton" : false,
+  "vipDesc" : "高级会员",
+  "expiresDesc" : "",
+  "buttonDesc" : "立即升级"
+}
+
+
+
+$done({body : JSON.stringify(objc)});
