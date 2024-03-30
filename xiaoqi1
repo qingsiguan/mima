@@ -1,0 +1,31 @@
+/*************************************
+
+小七助手
+
+**************************************
+
+[rewrite_local]
+https://gw.star7.chat/user/profile url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/xiaoqi1
+
+[mitm] 
+hostname = gw.star7.chat
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "userUuid" : "a5c75670-b065-4d4b-8097-ca74a06bde51",
+  "subscription" : {
+    "showUpgradeButton" : false,
+    "vipDesc" : "高级会员",
+    "expiresDesc" : "",
+    "buttonDesc" : "立即升级"
+  },
+  "userId" : 2642,
+  "name" : "小小",
+  "avatarUrl" : ""
+}
+
+
+
+$done({body : JSON.stringify(objc)});
