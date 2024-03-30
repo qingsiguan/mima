@@ -1,0 +1,21 @@
+/******************************
+
+脚本功能：文案生成器——解锁VIP
+
+*******************************
+
+[rewrite_local]
+
+https://api.assistantwriter.top:8080/user/login url script-response-body https://raw.githubusercontent.com/qingsiguan/mima
+/main/wenan
+
+[mitm] 
+
+hostname = api.assistantwriter.top
+
+*******************************/
+
+var body = $response.body.replace(/vip_end_time":\d+/g,'vip_end_time":8888888888')
+.replace(/is_vip":\d/g,'is_vip":1')
+.replace(/vip_type":\d/g,'vip_type":1')
+$done({ body });
