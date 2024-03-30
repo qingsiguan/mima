@@ -10,7 +10,7 @@ https://api.assistantwriter.top:8080/user/login url script-response-body https:/
 
 [mitm] 
 
-hostname = api.assistantwriter.top
+hostname = api.assistantwriter.top:8080
 
 *******************************/
 
