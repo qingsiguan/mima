@@ -1,0 +1,54 @@
+/*
+舞蹈生
+
+[rewrite_local]
+https://apidance.ctwh77.com/api/user4app/myinfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/wudao0
+
+[mitm]
+hostname = apidance.ctwh77.com
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "code" : 1,
+  "message" : null,
+  "result" : {
+    "SecretKey" : null,
+    "Money" : 1000,
+    "Receiver" : null,
+    "IsVip" : 1,
+    "CreateDate" : "/Date(1653157794000)/",
+    "ExpTime" : "/Date(2653157794000)/",
+    "UserName" : "17800000000",
+    "Password" : "7c6750229e46bba2ae6b669ec2ab4e8f",
+    "Sex" : 1,
+    "WeiXin" : null,
+    "Type" : 1,
+    "Address" : null,
+    "User4AppId" : 71467,
+    "NickName" : "17836***",
+    "FavItems" : "",
+    "UnionId" : null,
+    "UpdateDate" : "/Date(1653157794000)/",
+    "AppleOpenId" : null,
+    "Avatar" : null,
+    "Bg" : null,
+    "Phone" : "17800000000",
+    "IsCanYuePai" : 1,
+    "BuyTime" : null,
+    "Token" : null,
+    "CanDownItems" : "",
+    "BuyItemsCount" : 0,
+    "RemainBuyItemsCount" : 0,
+    "VipTypeName" : "com.ctwh2020.dance.iap.zzsubscrib",
+    "OpenId" : null,
+    "OldId" : 0,
+    "VipType" : 5
+  },
+  "servertime" : "/Date(1710387240699+0800)/",
+  "name" : "至尊会员",
+  "isSuc" : true
+}
+
+$done({body : JSON.stringify(objc)});
