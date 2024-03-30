@@ -1,0 +1,137 @@
+/*************************************
+
+录音转文字
+
+**************************************
+
+[rewrite_local]
+https://luyin2-api.luyingou.com/user/vip/getIosVipPage url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/luyin1
+
+[mitm] 
+hostname = luyin2-api.luyingou.com
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "code" : 0,
+  "message" : "ok",
+  "data" : {
+    "userVo" : {
+      "id" : 329755,
+      "onceConvertTime" : 60,
+      "vipExpire" : 2712042150,
+      "ossFileNum" : 0,
+      "vipMonthConvertTime" : 1080000,
+      "isVip" : true,
+      "appId" : "6446488825",
+      "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+      "loginType" : 4,
+      "alias" : "",
+      "fastConvertTime" : 60,
+      "ossFileSize" : 0,
+      "vipFastConvertTime" : 3600,
+      "name" : "游客329755",
+      "uploadSumSize" : 300
+    },
+    "text1" : "软件内置敏感词双向检测，可能会影响生成效果",
+    "newUser" : false,
+    "convertConfigText" : "无限转文字",
+    "text2" : "未满16周岁请在监护人陪同下使用或消费",
+    "userInfos" : [
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329012开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客328960开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329235开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客328895开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客328985开通了{\"zh-Hans\": \"月度订阅\",\"zh-Hant\": \"月度訂閱\",\"en\": \"Month\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329272开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329147开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329003开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客328907开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      },
+      {
+        "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+        "content" : "刚刚游客329258开通了{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}会员"
+      }
+    ],
+    "infoList" : [
+      {
+        "isSubscribe" : false,
+        "time" : 28105,
+        "rechargeId" : 11,
+        "iosRechargeId" : "com.zhuzi.permanents",
+        "businessType" : 100,
+        "description" : "{\"zh-Hans\": \"【限时上架】终身享受转写\",\"zh-Hant\": \"終身享受轉寫\",\"en\": \"Lifetime enjoyment\"}",
+        "timeText" : "{\"zh-Hans\": \"永久会员\",\"zh-Hant\": \"永久會員\",\"en\": \"Permanent\"}"
+      },
+      {
+        "isSubscribe" : true,
+        "time" : 365,
+        "rechargeId" : 15,
+        "iosRechargeId" : "com.zhuzi.years",
+        "businessType" : 100,
+        "description" : "{\"zh-Hans\": \"年度优惠\",\"zh-Hant\": \"限時特惠\",\"en\": \"Limited Time Offer\"}",
+        "timeText" : "{\"zh-Hans\": \"年度订阅\",\"zh-Hant\": \"年度訂閱\",\"en\": \"Year\"}"
+      },
+      {
+        "isSubscribe" : true,
+        "time" : 30,
+        "rechargeId" : 14,
+        "iosRechargeId" : "com.zhuzi.months",
+        "businessType" : 100,
+        "description" : "{\"zh-Hans\": \"新人尝鲜体验\",\"zh-Hant\": \"新人嘗鮮體驗\",\"en\": \"Tasting Experience\"}",
+        "timeText" : "{\"zh-Hans\": \"月度订阅\",\"zh-Hant\": \"月度訂閱\",\"en\": \"Month\"}"
+      },
+      {
+        "isSubscribe" : true,
+        "time" : 90,
+        "rechargeId" : 18,
+        "iosRechargeId" : "com.zhuzi.seasons",
+        "businessType" : 100,
+        "description" : "{\"zh-Hans\": \"季度价格更便宜\",\"zh-Hant\": \"季度價格更便宜\",\"en\": \"Quarterly cheaper\"}",
+        "timeText" : "{\"zh-Hans\": \"季度订阅\",\"zh-Hant\": \"季度訂閱\",\"en\": \"Season\"}"
+      },
+      {
+        "isSubscribe" : true,
+        "time" : 7,
+        "rechargeId" : 20,
+        "iosRechargeId" : "com.zhuzi.week",
+        "businessType" : 100,
+        "description" : "{\"zh-Hans\": \"试用套餐包\",\"zh-Hant\": \"試用套餐包\",\"en\": \"Trial Package\"}",
+        "timeText" : "{\"zh-Hans\": \"包周订阅\",\"zh-Hant\": \"包周訂閱\",\"en\": \"Week\"}"
+      }
+    ]
+  },
+  "traceId" : "20240330229782993162",
+  "timestamps" : 1711782993380
+}
+
+
+
+$done({body : JSON.stringify(objc)});
