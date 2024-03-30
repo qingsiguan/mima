@@ -1,0 +1,45 @@
+/*************************************
+
+录音转文字
+
+**************************************
+
+[rewrite_local]
+https://luyin2-api.luyingou.com/user/getAppUser url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/luyin0
+
+[mitm] 
+hostname = luyin2-api.luyingou.com
+
+************************************/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "code" : 0,
+  "message" : "ok",
+  "data" : {
+    "convertLanguageNow" : "[{\"name\":\"普通话(简体)\",\"support\":\"yitu\",\"key\":\"zh-Hans\",\"textKey\":\"zh-Hans\"},{\"name\":\"English\",\"support\":\"tencent\",\"key\":\"16k_en\",\"textKey\":\"en\"},{\"name\":\"臺灣話(繁體)\",\"support\":\"tencent\",\"key\":\"16k_zh-TW\",\"textKey\":\"zh-Hant\"},{\"name\":\"粤语(简体)\",\"support\":\"tencent\",\"key\":\"16k_ca\",\"textKey\":\"zh-Hant\"},{\"name\":\"多方言\",\"support\":\"tencent\",\"key\":\"16k_zh_dialect\",\"textKey\":\"zh-Hans\"},{\"name\":\"日本語\",\"support\":\"tencent\",\"key\":\"16k_ja\",\"textKey\":\"ja\"}]",
+    "user" : {
+      "id" : 329755,
+      "onceConvertTime" : 60,
+      "vipExpire" : 2712042150,
+      "ossFileNum" : 0,
+      "vipMonthConvertTime" : 1080000,
+      "isVip" : true,
+      "appId" : "6446488825",
+      "avatar" : "https://file.shengmaapp.com/storage/convert/common/default/default_user_avatar.png",
+      "loginType" : 4,
+      "alias" : "",
+      "fastConvertTime" : 60,
+      "ossFileSize" : 0,
+      "vipFastConvertTime" : 3600,
+      "name" : "游客329755",
+      "uploadSumSize" : 300
+    },
+    "convertLanguage" : "[{\"name\":\"中文普通话\",\"key\":\"zh-Hans\",\"textKey\":\"zh-Hans\",\"desc\":\"适用于中国大陆地区\",\"support\":\"yitu\"},{\"name\":\"大陆方言\",\"key\":\"zh-Hans-FY\",\"textKey\":\"zh-Hans\",\"desc\":\"常见的23种方言\",\"support\":\"tx\"},{\"name\":\"English\",\"key\":\"en\",\"textKey\":\"en\",\"desc\":\"World languages\",\"support\":\"yitu\"},{\"name\":\"粤语(简体)\",\"key\":\"zh-Hant\",\"textKey\":\"zh-Hant\",\"desc\":\"广东、香港地区\",\"support\":\"tx\"},{\"name\":\"やまと\",\"key\":\"ja\",\"textKey\":\"ja\",\"desc\":\"正確な日本語\",\"support\":\"tx\"},{\"name\":\"Tiếng Việt\",\"key\":\"vi\",\"textKey\":\"vi\",\"desc\":\"Tiếng Việt tốt\",\"support\":\"tx\"}]"
+  },
+  "traceId" : "20240330229782996483",
+  "timestamps" : 1711782996495
+}
+
+
+$done({body : JSON.stringify(objc)});
