@@ -1,0 +1,32 @@
+/*************************************
+
+solvely
+
+**************************************
+
+[rewrite_local]
+https://d2s0uxxfvf1zgr.cloudfront.net/solveNowServer/user/userInfo/v1.0?deviceId=wDO0oo7mwlf44hiPtoHC1GZYgti2 url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/solve0
+
+[mitm] 
+hostname = d2s0uxxfvf1zgr.cloudfront.net
+
+************************************/
+
+
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "statusCode" : 200,
+  "data" : {
+    "userPicture" : null,
+    "userName" : "小小 白",
+    "isUnlimitUser" : true,
+    "role" : 1,
+    "grade" : "Graduate and above",
+    "email" : "",
+    "isSigned" : 1,
+    "balance" : "0"
+  }
+}
+
+$done({body : JSON.stringify(objc)});
