@@ -6,9 +6,9 @@ rochat终极版
 
 [rewrite_local]
 #修改
-https:\/\/api\.revenuecat\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/chatro0
+^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/chatro0
 #清理
-https:\/\/api\.revenuecat\.com\/v1\/receipts url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/chatro0
+^https:\/\/api\.revenuecat\.com\/v1\/receipts url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/chatro0
 
 
 [mitm] 
