@@ -19,8 +19,8 @@ hostname = api.revenuecat.com
 const Q = {};
 const Q1 = JSON.parse(typeof $response != "undefined" && $response.body || null);
 if (typeof $response == "undefined") {
-  delete $request.headers["x-revenuecat-etag"];
-  delete $request.headers["X-RevenueCat-ETag"];
+  delete $request.headers["x-apple-device-identifier"];
+  delete $request.headers["X-Apple-Device-Identifier"];
   Q.headers = $request.headers;
 } else if (Q1 && Q1.subscriber) {
   Q1.subscriber.subscriptions = Q1.subscriber.subscriptions || {};
