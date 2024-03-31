@@ -24,11 +24,11 @@ var objc = JSON.parse($response.body);
       "redeemedGems" : 0,
       "discount" : "",
       "redeemGemsRemainDays" : 0,
-      "expiresTime" : 0,
+      "expiresTime" : 2711874876000,
       "period" : 0,
       "subscriptionChannel" : "",
-      "productId" : "",
-      "isExpired" : true,
+      "productId" : "7000028",
+      "isExpired" : false,
       "nextRedeemGems" : 200,
       "hasUnredeemedGems" : false,
       "isCancelled" : false,
@@ -37,8 +37,8 @@ var objc = JSON.parse($response.body);
     "subscribePlan" : 4,
     "blackFridayInfo" : {
       "subscriptionChannel" : "",
-      "productId" : "",
-      "expiresTime" : 0
+      "productId" : "7000028",
+      "expiresTime" : 2711874876000
     },
     "unlimitedInfo" : {
       "period" : 1,
