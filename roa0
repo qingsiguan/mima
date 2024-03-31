@@ -3,7 +3,6 @@ rochat
 
 [rewrite_local]
 https://api.revenuecat.com/v1/receipts url script-request-body https://raw.githubusercontent.com/qingsiguan/mima/main/roa0
-https://api.revenuecat.com/v1/receipts url script-request-header https://raw.githubusercontent.com/qingsiguan/mima/main/roa0
 
 [mitm]
 hostname = api.revenuecat.com
