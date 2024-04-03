@@ -1,0 +1,36 @@
+/*************************************
+
+牛津词典
+
+**************************************
+
+[rewrite_local]
+https://oxfordx.cp.com.cn/api/pay/apple_notify url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/niujin
+
+[mitm] 
+hostname = oxfordx.cp.com.cn
+
+************************************/
+
+
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "message" : "成功",
+  "data" : {
+    "transaction_ids" : [
+
+    ],
+    "user" : {
+      "created_at" : "2023-08-24 08:49:03",
+      "id" : 14876,
+      "phone" : " ",
+      "upgradable_lifelong" : true,
+      "is_vip" : 1,
+      "expire_date" : "2099-12-31 04:01:05"
+    }
+  },
+  "status_code" : 0
+}
+
+$done({body : JSON.stringify(objc)});
