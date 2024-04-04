@@ -1,0 +1,58 @@
+/*
+grammar
+
+[rewrite_local]
+https://api.revenuecat.com/v1/subscribers/$RCAnonymousID%3A11d65289d5b64728ae201c5021d96d30 url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/grammar0
+
+[mitm]
+hostname = api.revenuecat.com
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "request_date_ms" : 1711020489529,
+  "request_date" : "2024-03-21T11:28:09Z",
+  "subscriber" : {
+    "non_subscriptions" : {
+
+    },
+    "first_seen" : "2024-03-21T11:19:31Z",
+    "original_application_version" : "2",
+    "other_purchases" : {
+
+    },
+    "management_url" : "https://apps.apple.com/account/subscriptions",
+    "subscriptions" : {
+      "sv.aigrammerchecker.com.lifetime" : {
+        "original_purchase_date" : "2024-03-21T11:20:16Z",
+        "expires_date" : "2099-03-24T11:20:15Z",
+        "is_sandbox" : false,
+        "refunded_at" : null,
+        "store_transaction_id" : "150001727637748",
+        "unsubscribe_detected_at" : null,
+        "grace_period_expires_date" : null,
+        "period_type" : "trial",
+        "purchase_date" : "2024-03-21T11:20:15Z",
+        "billing_issues_detected_at" : null,
+        "ownership_type" : "PURCHASED",
+        "store" : "app_store",
+        "auto_resume_date" : null
+      }
+    },
+    "entitlements" : {
+      "pro" : {
+        "grace_period_expires_date" : null,
+        "purchase_date" : "2024-03-21T11:20:15Z",
+        "product_identifier" : "sv.aigrammerchecker.com.lifetime",
+        "expires_date" : "2099-03-24T11:20:15Z"
+      }
+    },
+    "original_purchase_date" : "2024-03-21T11:16:32Z",
+    "original_app_user_id" : "$RCAnonymousID:11d65289d5b64728ae201c5021d96d30",
+    "last_seen" : "2024-03-21T11:19:31Z"
+  }
+}
+
+
+$done({body : JSON.stringify(objc)});
