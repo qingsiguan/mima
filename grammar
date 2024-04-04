@@ -37,7 +37,7 @@ if (typeof $response == "undefined") {
   var UA = $request.headers['user-agent'];
   const app = '1';
   const UAMappings = {
-    'grammar':{ name: 'Unlimited Access', id: 'sv.aigrammerchecker.com.threemonths'},
+    'grammar':{ name: 'Unlimited', id: 'sv.aigrammerchecker.com.threemonths'},
     
     };
 
