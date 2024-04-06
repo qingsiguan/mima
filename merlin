@@ -23,9 +23,8 @@ const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body ||
 const ua = headers['User-Agent'] || headers['user-agent'];
 const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
-
-const list = {
-	'Merlin': { name: 'Unilimited Access', id: 'merlinai_yearly', cm: 'sja' },  //
+const bundle = {
+	'com.dogtownmedia.merlinai': { name: 'pro', id: 'merlinai_yearly', cm: 'sja' },  //
 
 };
 
