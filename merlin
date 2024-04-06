@@ -25,7 +25,7 @@ const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id']
 
 
 const list = {
-	'Merlin': { name: 'PRO', id: 'merlinai_yearly', cm: 'sja' },  //
+	'Merlin': { name: 'pro-IOS', id: 'merlinai_yearly', cm: 'sja' },  //
 
 };
 
