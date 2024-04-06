@@ -24,7 +24,7 @@ const ua = headers['User-Agent'] || headers['user-agent'];
 const bundle_id = headers['X-Client-Bundle-ID'] || headers['x-client-bundle-id'];
 
 const bundle = {
-	'com.dogtownmedia.merlinai': { name: 'pro', id: 'merlinai_yearly', cm: 'sja' },  //
+	'com.dogtownmedia.merlinai': { name: 'Pro', id: 'merlinai_yearly', cm: 'sja' },  //
 
 };
 
