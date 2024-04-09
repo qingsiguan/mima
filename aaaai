@@ -1,0 +1,31 @@
+AI助手
+/*
+gpt
+
+[rewrite_local]
+https://ainvud.mingnianbaofu.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/aaaai
+
+[mitm]
+hostname = ainvud.mingnianbaofu.top
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "msg" : "ok",
+  "data" : {
+    "avatar" : "https://oss.yhxykj.com/im-prod/2024/03/20/cf514d65d4e54411af6db157a3b23065.png",
+    "vipLabel" : "0",
+    "imgNum" : 10000,
+    "vipdays" : "35999",
+    "id" : "1777666941871890434",
+    "nickname" : "aaa",
+    "autoMatch" : "1",
+    "vipStatus" : "1",
+    "vipExpireTime" : "2122-08-16 08:20:30",
+    "faceAuthStatus" : "0",
+    "likeNum" : 0
+  },
+  "code" : 200
+
+$done({body : JSON.stringify(objc)});
