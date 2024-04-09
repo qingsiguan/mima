@@ -15,7 +15,7 @@ var objc = JSON.parse($response.body);
   "msg" : "ok",
   "data" : {
     "avatar" : "https://oss.yhxykj.com/im-prod/2024/03/20/cf514d65d4e54411af6db157a3b23065.png",
-    "vipLabel" : "6",
+    "vipLabel" : "4",
     "imgNum" : 10,
     "vipdays" : "35999",
     "id" : "839121269132439554",
