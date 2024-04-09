@@ -17,7 +17,6 @@ var objc = JSON.parse($response.body);
     "avatar" : "https://oss.yhxykj.com/im-prod/2024/03/20/cf514d65d4e54411af6db157a3b23065.png",
     "vipLabel" : "6",
     "imgNum" : 10,
-    "vipdays" : "35999",
     "id" : "1777666941871890434",
     "nickname" : "尾号n3D541B80-24E8-456C-8CDF-A1C9165595EB",
     "autoMatch" : "1",
