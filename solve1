@@ -1,0 +1,65 @@
+/*************************************
+
+solvely
+
+**************************************
+
+[rewrite_local]
+#修改
+https://d2s0uxxfvf1zgr.cloudfront.net/solveNowServer/purch/purchaseInfo/v1.0 url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/solve1
+
+
+[mitm] 
+hostname = d2s0uxxfvf1zgr.cloudfront.net
+
+************************************/
+
+
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "statusCode" : 200,
+  "data" : {
+    "subscriptionInfo" : {
+      "redeemedGems" : 10000,
+      "discount" : "",
+      "redeemGemsRemainDays" : 1,
+      "expiresTime" : 2711874876000,
+      "period" : 0,
+      "subscriptionChannel" : "ios",
+      "productId" : "7000028",
+      "isExpired" : false,
+      "nextRedeemGems" : 200,
+      "hasUnredeemedGems" : true,
+      "isCancelled" : false,
+      "upgradeProductId" : ""
+    },
+    "subscribePlan" : 4,
+    "blackFridayInfo" : {
+      "subscriptionChannel" : "ios",
+      "productId" : "7000028",
+      "expiresTime" : 2711874876000
+    },
+    "unlimitedInfo" : {
+      "period" : 1,
+      "isEnjoyedSpecialOffer" : true,
+      "productId" : "7000028",
+      "isPurchasedThreeDayPromo" : false,
+      "subscriptionChannel" : "ios",
+      "isCancelled" : false,
+      "isPurchasedMonthlyDeal" : true,
+      "isInFreeTrial" : false,
+      "expiresTime" : 2711874876000
+    },
+    "productIds" : [
+      "7000005",
+      "7000006",
+      "7000007" 
+    ],
+    "consumableInfo" : {
+      "isPurch5000Gems" : true
+    }
+  }
+}
+
+$done({body : JSON.stringify(objc)});
