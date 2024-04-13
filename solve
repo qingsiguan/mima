@@ -21,16 +21,16 @@ var objc = JSON.parse($response.body);
   "statusCode" : 200,
   "data" : {
     "subscriptionInfo" : {
-      "redeemedGems" : 0,
+      "redeemedGems" : 10000,
       "discount" : "",
-      "redeemGemsRemainDays" : 0,
+      "redeemGemsRemainDays" : 9999,
       "expiresTime" : 2711874876000,
       "period" : 0,
       "subscriptionChannel" : "",
       "productId" : "7000028",
       "isExpired" : false,
       "nextRedeemGems" : 200,
-      "hasUnredeemedGems" : false,
+      "hasUnredeemedGems" : true,
       "isCancelled" : false,
       "upgradeProductId" : ""
     },
@@ -47,7 +47,7 @@ var objc = JSON.parse($response.body);
       "isPurchasedThreeDayPromo" : false,
       "subscriptionChannel" : "ios",
       "isCancelled" : 0,
-      "isPurchasedMonthlyDeal" : false,
+      "isPurchasedMonthlyDeal" : true,
       "isInFreeTrial" : true,
       "expiresTime" : 2711874876000
     },
@@ -55,7 +55,7 @@ var objc = JSON.parse($response.body);
 
     ],
     "consumableInfo" : {
-      "isPurch5000Gems" : false
+      "isPurch5000Gems" : true
     }
   }
 }
