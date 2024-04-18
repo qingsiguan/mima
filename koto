@@ -1,0 +1,32 @@
+/*
+kotodama
+
+[rewrite_local]
+https://api.kotodama.app/api/v1/auth/getUserInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/koto
+
+[mitm]
+hostname = api.kotodama.app
+
+*/
+
+var objc = JSON.parse($response.body);
+    objc = {
+  "status" : 200,
+  "message" : "Success",
+  "timestamp" : "2024-04-18T02:18:03.470323401",
+  "data" : {
+    "subscribed" : true,
+    "premiumCount" : 0,
+    "totalCount" : 2000000,
+    "id" : "d67495c4-fc6a-40ed-9285-4a25c7bc8e9e",
+    "trial" : true,
+    "new" : false,
+    "defaultCount" : 20000,
+    "experationDate" : "2099-04-18T02:18:03.470323401",
+    "first500" : true,
+    "currentPlan" : "add_character_100k"
+  }
+}
+
+
+$done({body : JSON.stringify(objc)});
