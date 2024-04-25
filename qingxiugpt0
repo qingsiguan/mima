@@ -2,7 +2,7 @@
 青岫
 
 [rewrite_local]
-https://www.iqingxiu.com/mapi/gpt/vip/info url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/qingxiugpt0
+https://www.iqingxiu.com/mapi/tools/gpt/vip/info url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/qingxiugpt0
 
 [mitm]
 hostname = www.iqingxiu.com
