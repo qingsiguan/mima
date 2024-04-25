@@ -19,7 +19,7 @@ var objc = JSON.parse($response.body);
     "newUserReward" : null,
     "endTime" : "2099-04-28 20:01:10",
     "newUser" : false,
-    "vipLevel" : 1,
+    "vipLevel" : 2,
     "showRenew" : false,
     "vipName" : "智能写作会员",
     "obtainType" : 1,
