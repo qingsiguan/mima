@@ -2,7 +2,7 @@
 青岫
 
 [rewrite_local]
-https://www.iqingxiu.com/mapi/gpt/vip/info url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/qingxiugpt
+https://www.iqingxiu.com/mapi/tools/asr/vip/info url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/qingxiugpt
 
 [mitm]
 hostname = www.iqingxiu.com
@@ -21,7 +21,7 @@ var objc = JSON.parse($response.body);
     "newUser" : false,
     "vipLevel" : 2,
     "showRenew" : false,
-    "vipName" : "智能助手会员",
+    "vipName" : "文案提取会员",
     "obtainType" : 1,
     "startTime" : "2024-04-25 20:01:10"
   }
