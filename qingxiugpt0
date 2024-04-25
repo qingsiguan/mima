@@ -21,7 +21,7 @@ var objc = JSON.parse($response.body);
     "newUser" : false,
     "vipLevel" : 2,
     "showRenew" : false,
-    "vipName" : "智能写作会员",
+    "vipName" : "智能助手会员-3个月",
     "obtainType" : 1,
     "startTime" : "2024-04-25 20:01:10"
   }
