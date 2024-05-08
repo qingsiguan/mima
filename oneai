@@ -1,0 +1,57 @@
+/*
+one AI
+
+[rewrite_local] 
+^https?:\/\/service-hgtbohj8-1259001022\.gz\.apigw\.tencentcs\.com\/release\/requestUserData url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/oneai
+
+[MITM]
+hostname = service-hgtbohj8-1259001022.gz.apigw.tencentcs.com
+
+*/
+var Rnik = JSON.parse($response.body);
+Rnik = {
+  "systemName" : "iOS",
+  "device" : "iPhone 13",
+  "countFreeMessage" : 10,
+  "emailDate" : "",
+  "countFreeMessageDaily" : 20,
+  "countReviewRewardEach" : 99,
+  "latestInSubDate" : "2024-05-08 08:11:15",
+  "countInviteRewardTotal" : 99,
+  "countInviteRewardEach" : 100,
+  "emailTime" : 0,
+  "version" : "1.9.0",
+  "inviteCodeSelf" : "795579",
+  "wechatGroupQrCodeScreenshotDate" : null,
+  "updateDate" : "2024-05-08 08:11:15",
+  "appInstalled" : "ChatGPT_OpenCat_AMA_WanJuan_TestFlight_chatx_WXYY_Spark_TongYi",
+  "weiboDate" : "",
+  "wechatGroupQrCodeScreenshotTime" : null,
+  "countModeration" : 4,
+  "deviceId" : "55d638e9a2f14f4bac91f9a5d51ff49b",
+  "blackListCode" : 0,
+  "updateTime" : 1715127075,
+  "countFreeMessageConsumed" : 0,
+  "freeTryEndDate" : "4081846329",
+  "weiboTime" : 0,
+  "inviteCodeBy" : "",
+  "systemVersion" : "16.7.2",
+  "createDate" : "2024-05-08 07:53:13",
+  "languageCode" : "zh",
+  "createTime" : 1715125993,
+  "ghostDetail" : "",
+  "countInviteInvitees" : 99,
+  "trafficMode" : 1,
+  "countInviteRewardRemain" : 99,
+  "blackListDetail" : "",
+  "build" : "2258",
+  "isSubscriptionActive" : 1,
+  "displayName" : "OneAI"
+}
+
+
+  
+  
+  
+  
+$done({ body: JSON.stringify(Rnik) });
