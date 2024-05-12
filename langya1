@@ -1,0 +1,74 @@
+/*
+琅琊配音
+
+[rewrite_local] 
+ 
+https:\/\/www\.lang123\.top\/proxy\/api\/home\/GetInfo\?platform=ios&build=12&token=dff9e665-a650-4190-a94a-60eaf8ae2c29&t=\d+ url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/langya1
+
+[MITM]
+hostname = www.lang123.top
+
+*/
+var Rnik = JSON.parse($response.body);
+Rnik = {
+  "message" : "成功",
+  "data" : {
+    "adList" : [
+      {
+        "status" : 0,
+        "sort" : 90,
+        "id" : "2",
+        "updateTime" : 1711362309000,
+        "imageUrl" : "https://res.lang123.top/res/temp/dashang-wxl.jpeg",
+        "createTime" : 1707209795000,
+        "name" : "运营师"
+      }
+    ],
+    "adText" : "琅琅会一直坚守为用户提供优质的、免费的、强大的配音平台，我们有着优秀的团队，目标清晰、团结协作、爱岗敬业，其中更有卓越的同学为琅琅配音做出了巨大的贡献，你的支持是他们坚持下去的动力😊~",
+    "adTitle" : "琅琅团队",
+    "defaultSpeak" : {
+      "auditionUrl" : "https://res.lang123.top/res/audio/6b7aff87-5452-4b1f-b814-87158dfdfd3e.wav",
+      "headUrl" : "https://res.lang123.top/res/img/a2175586-f80d-4d2f-9873-314450063829.jpg",
+      "id" : "34",
+      "name" : "晓晓",
+      "supportFuncTag" : 0,
+      "field" : "edge",
+      "isGold" : 0,
+      "code" : "zh-CN-XiaoxiaoNeural",
+      "tag" : "热门女声、转换速度快、不支持功能标签",
+      "language" : "中文",
+      "hostType" : 3,
+      "moreRole" : 0,
+      "gender" : 2,
+      "moreEmo" : 0
+    },
+    "hasNewVersion" : false,
+    "inReview" : false,
+    "visitText" : "平台今日共转换文字：2901220，今日访问人数：10207",
+    "user" : {
+      "rightsSelectAudition" : 0,
+      "isAdmin" : 0,
+      "limitGiveRemain" : 70000,
+      "limitGiveRemainTipRemark" : "额度说明：\n1. 平台每月1号赠送普通用户50000额度，赚取积分可获得更高的赠送额度（详见积分说明）；\n2. 赠送的额度当月有效；\n3. 兑换的额度自兑换之日起90天内有效",
+      "recommandTip" : "说明：\n1. 只有邀请新用户才能建立推荐关系，获得积分奖励。",
+      "recommandTitle" : "将邀请链接分享给你的朋友，Ta加入之后，你和你的朋友各获得30积分；如果你的朋友购买了积分，你还可以获得现金奖励。",
+      "rightsGiveMonth" : 70000,
+      "rightsGoldSpeaker" : 0,
+      "rightsTip" : "权益说明：\n1. 累计积分获得的权益永久有效；\n2. 为答谢前期用户对琅琅配音的支持，凡注册时间在2024-03-19之前的用户，全部赠送多人配音的权益，但赠送的权益在2024-06-30日失效，希望老铁们在享受琅琅配音带来的便利的同时，赶紧赚取积分，开通永久权益吧",
+      "limitRemain" : 100000,
+      "pointRemain" : 1000000,
+      "limitExchangeRemain" : 0,
+      "rightsCharLimit" : 7000,
+      "rightsMultiPeople" : 0,
+      "pointTip" : "积分说明：\n1. 积分是琅琅配音的虚拟资产，仅限在琅琅配音平台使用，积分不支持提现；\n2. 积分可用于兑换文字转换额度，每100积分可以兑换5000转换额度，每次兑换最低100积分起，兑换的额度自兑换之日起90天内有效；\n3. 积分有效期：从积分获取之日起1年内有效，请合理安排兑换时间；\n4. 积分可通过邀请好友、参加平台活动、观看视频广告、支持优秀同学等方式获得：\n\t4.1 邀请好友：您可以邀请您的朋友加入琅琅配音，在“琅琅智音”微信小程序中分享“邀请链接”给您的朋友，您的朋友通过您的链接加入后，您和您的朋友可以分别获得30积分的奖励，如果您的朋友购买了积分，您还可以获得现金奖励；\n\t4.2 参加平台活动：平台会不定期组织各种活动，完成活动可获得积分；\n\t4.3 观看视频广告：下载琅琅配音app或使用琅琅配音的小程序，观看里面的视频广告可获得积分；\n\t4.4 支持优秀同学：对琅琅配音优秀同学的打赏支持，平台作为感谢会赠送一定的积分（100元赠送10000积分，联系微信wangxiaolei1587）；\n5. 累积积分是指您在平台获取的历史积分之和，积分兑换文字额度不影响累积积分，累积积分是用来开通各项权益的重要凭证：\n\t5.1 累积积分达到3000，可获得：使用下载字幕的权益，每月平台赠送额度提升为60000，单次合成文字限制提升为2000字；\n\t5.2 累积积分达到5000，可获得：使用多人配音的权益，每月平台赠送额度提升为70000，单次合成文字限制提升为3000字；\n\t5.3 累积积分达到10000，可获得：使用金牌主播的权益，每月平台赠送额度提升为80000，单次合成文字限制提升为5000字；\n\t5.4 累积积分达到15000，可获得：使用逐句试听的权益，每月平台赠送额度提升为90000，单次合成文字限制提升为6000字；\n\t5.5 累积积分达到20000，可获得：使用字幕批量合成的权益，每月平台赠送额度提升为100000，单次合成文字限制提升为7000字；\n\t注：获得的权益永久有效",
+      "rightsSrtCompose" : 0,
+      "rightsSrtExport" : 0,
+      "name" : "12345678901",
+      "pointTotal" : 1000000
+    }
+  },
+  "code" : 200
+}
+
+
+$done({ body: JSON.stringify(Rnik) });
