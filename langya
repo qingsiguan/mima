@@ -1,0 +1,45 @@
+/*
+琅琊配音
+
+[rewrite_local] 
+https://www.lang123.top/proxy/api/user/GetInfo?token=dff9e665-a650-4190-a94a-60eaf8ae2c29&t=1715493894837 url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/langya
+
+[MITM]
+hostname = www.lang123.top
+
+*/
+var Rnik = JSON.parse($response.body);
+Rnik = {
+  "message" : "成功",
+  "data" : {
+    "user" : {
+      "limitRemain" : 5000000,
+      "rightsSrtExport" : 0,
+      "code" : "17836963268",
+      "rightsGoldSpeaker" : 0,
+      "rightsGiveMonth" : 5000000,
+      "limitGiveRemainTip" : "5000000，本月底失效",
+      "limitExchangeRemainTip" : "0",
+      "rightsSrtCompose" : 0,
+      "name" : "12345678900",
+      "id" : "00000",
+      "isAdmin" : 0,
+      "recommandTip" : "无",
+      "rightsMultiPeople" : 0,
+      "rightsSelectAudition" : 0,
+      "rightsTip" : "永久会员",
+      "limitGiveRemainTipRemark" : "额度无限",
+      "pointTotal" : 1000000,
+      "limitExchangeRemain" : 0,
+      "pointTip" : "积分永久有效",
+      "limitGiveRemain" : 50000,
+      "createTime" : 1714909607000,
+      "pointRemain" : 13,
+      "recommandTitle" : "会员",
+      "rightsCharLimit" : 10000
+    }
+  },
+  "code" : 200
+}
+
+$done({ body: JSON.stringify(Rnik) });
