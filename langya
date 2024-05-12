@@ -2,7 +2,7 @@
 琅琊配音
 
 [rewrite_local] 
-https?:\/\/www\.lang123\.top\/proxy\/api\/user\/GetInfo\?token= url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/langya
+https:\/\/www\.lang123\.top\/proxy\/api\/user\/GetInfo\?token=dff9e665-a650-4190-a94a-60eaf8ae2c29&t=\d+ url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/langya
 
 [MITM]
 hostname = www.lang123.top
