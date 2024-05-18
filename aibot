@@ -1,0 +1,27 @@
+/*
+ai bot
+
+[rewrite_local] 
+https://api.chatgp5.cc/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/aibot
+
+[MITM]
+hostname = api.chatgp5.cc
+
+*/
+var Rnik = JSON.parse($response.body);
+Rnik = {
+  "msg" : "ok",
+  "data" : {
+    "avatar" : " ",
+    "vipLabel" : "1",
+    "imgNum" : 6666666,
+    "id" : "12345",
+    "nickname" : "bbb",
+    "chatNum" : 6,
+    "vipStatus" : "1"
+  },
+  "code" : 200
+}
+  
+  
+$done({ body: JSON.stringify(Rnik) });
