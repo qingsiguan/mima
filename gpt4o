@@ -1,0 +1,19 @@
+/*
+GTP4o 
+
+[rewrite_local]
+
+https://nichousha.sjrjyffs.top/api/img/aiSketch url script-request-body https://raw.githubusercontent.com/qingsiguan/mima/main/gpt4o0
+https://nichousha.sjrjyffs.top/api/app/user/getCurrentInfo url script-response-body https://raw.githubusercontent.com/qingsiguan/mima/main/gpt4o
+
+[mitm]
+hostname = nichousha.sjrjyffs.top
+*/
+
+if ($request.url.includes('api/app/user/getCurrentInfo')) {
+    let body = JSON.parse($response.body);
+    Object.assign(body.data, { vipStatus: "1", nickname: "bai", vipLabel: "1", imgNum: 9999 });
+    $done({ body: JSON.stringify(body) });
+} else {
+    $done({});
+}
